@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -22,7 +22,7 @@ const Register = () => {
     event.preventDefault();
     try {
       const response = await registerUser(data);
-      if (response.status === 201) {
+      if (response.status === 200) {
         toast.success("Registration completed. Please login.");
         navigate("/login");
       } else {
